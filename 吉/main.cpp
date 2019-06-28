@@ -1,11 +1,11 @@
-# include <iostream>
+#include <iostream>
 # include<fstream>
 # include<string>
 using namespace std;
 struct student{
-    char num[3];
-    char name[3];
-    char xueyuan[3];
+    char num[11];
+    char name[11];
+    char xueyuan[11];
 };
 struct referee{
     char name[7];
@@ -14,40 +14,42 @@ struct referee{
 int main(int argc, const char * argv[]) {
    
     ifstream in( "/users/hp/Desktop/a.txt");
-    //ifstream cin("/users/hp/Desktop/b.txt");
-   // ofstream out("/users/hp/Desktop/c.txt",ios_base::out);
+    ifstream cin("/users/hp/Desktop/c.txt");
+    ofstream out("/users/hp/Desktop/c.txt",ios_base::out);
     int i,k,j,a,b;
     int line;
-    struct student s[3];
+    struct student s[11];
     for(i=0;i<3;i++){
     gets(s[i].name);
     gets(s[i].num);
     gets(s[i].xueyuan);
         }
 
-   // for(k=0;k<7;k++){
-       // gets(s1.name);
-       // gets(s1.score);
-    //}
-  
+    for(k=0;k<7;k++){
+        gets(s1.name);
+        gets(s1.score);
+    }
+ char student[1000]; 
 if(in.is_open()){
-	char student[1000];
-   in.getline(student,1000);
-	cout<<student;
-	cout<<endl;
+	
+	
 }
 in.close();
-//if(cin.is_open()){
-	
-//cin>>b;
-//}
-//cin.close();
-//if(out.is_open()){
+if(cin.is_open()){
+    char ch;
+	in.get(ch);
+	cout<<ch;
+
+}
+cin.close();
+if(out.is_open()){
+	char d;
+	cin>>d;
 	//for(j=0;j<=1000;j++){
 		//out<<student[j];
 	//}
-//	out<<b;
-//}
-//out.close();
+	out<<b;
+}
+out.close();
     return 0;
 }
